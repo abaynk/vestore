@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
+import { getStorage } from "firebase/storage";
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTnX-NSLjtoprXpf_K8ctKkByrcRYElKY",
   authDomain: "vestore-credit.firebaseapp.com",
@@ -12,4 +12,5 @@ const firebaseApp = initializeApp({
 });
 
 const db = getFirestore();
-export { db, firebaseApp };
+const storage = getStorage(firebaseApp);
+export { db, firebaseApp, storage };

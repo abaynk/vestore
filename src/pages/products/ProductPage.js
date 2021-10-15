@@ -1,30 +1,54 @@
+import { doc, getDoc } from "@firebase/firestore";
+import { getDownloadURL, ref } from "@firebase/storage";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { db } from "../../firebase";
-import { doc, getDoc } from "firebase/firestore";
-
+import { db, storage } from "../../firebase";
+import "./ProductPage.css";
 const ProductPage = (props) => {
   const id = props.match.params.id;
   const [data, setData] = useState();
+
   useEffect(() => {
+    console.log(id);
     const getData = async () => {
       const querySnapshot = await getDoc(doc(db, "products", id));
       if (querySnapshot.exists()) {
+        console.log(querySnapshot.data().title);
         setData(querySnapshot.data());
+      } else {
+        console.error("no docuement was found");
       }
     };
-    getData();
+    if (id) {
+      getData();
+    }
   }, [id]);
+  useEffect(() => {
+    getDownloadURL(ref(storage, "product1-1.png"))
+      .then((url) => {
+        // Or inserted into an <img> element
+        const img = document.getElementById("myimg");
+        img.setAttribute("src", url);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
   if (!data) {
-    return <p>Loading</p>;
+    return <p>Loading...</p>;
   }
   return (
-    <div>
-      <h3>
-        <Link to="/">back to home</Link>
-      </h3>
-      <h1>This is product with id: {id}</h1>
-      <h2>{data.title}</h2>
+    <div className="product_root">
+      <h1>{data.title}</h1>
+      <img id="myimg" alt="text" />
+      <div className="product_details">
+        <p>Описание</p>
+        <p>Производитель: {data.brand}</p>
+        <p>Категория: {data.category}</p>
+        <p>Описание: {data.description}</p>
+        <p>Серийный номер: {data.id}</p>
+        <p>Цена: {data.price}</p>
+        <p>Магазин: {data.store}</p>
+      </div>
     </div>
   );
 };
