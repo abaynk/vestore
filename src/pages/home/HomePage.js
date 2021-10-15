@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import QrReader from 'react-qr-reader'
-import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     const [link, setLink] = useState('');
