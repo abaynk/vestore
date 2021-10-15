@@ -29,6 +29,10 @@
   border-radius: 8px;
   border: none;
   background: #d83232;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
 }
 .popup_button > a {
   color: #ffff;

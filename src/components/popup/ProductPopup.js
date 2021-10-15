@@ -24,10 +24,9 @@ const ProductPopup = ({ product, id }) => {
     <div className="popup_root">
       <h2 className="popup_title">{product.title}</h2>
       <img id="myimg" alt="text" />
-
-      <button className="popup_button">
-        <Link to={`/products/${id}`}>купить</Link>
-      </button>
+      <Link to={`/products/${id}`} className="popup_button">
+        <button className="popup_button">купить</button>
+      </Link>
     </div>
   );
 };
