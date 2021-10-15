@@ -14,6 +14,15 @@ const ProductPage = (props) => {
       if (querySnapshot.exists()) {
         console.log(querySnapshot.data().title);
         setData(querySnapshot.data());
+        getDownloadURL(ref(storage, querySnapshot.data().img))
+          .then((url) => {
+            // Or inserted into an <img> element
+            const img = document.getElementById("myimg");
+            img.setAttribute("src", url);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       } else {
         console.error("no docuement was found");
       }
@@ -22,17 +31,7 @@ const ProductPage = (props) => {
       getData();
     }
   }, [id]);
-  useEffect(() => {
-    getDownloadURL(ref(storage, "product1-1.png"))
-      .then((url) => {
-        // Or inserted into an <img> element
-        const img = document.getElementById("myimg");
-        img.setAttribute("src", url);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  });
+
   if (!data) {
     return <p>Loading...</p>;
   }
