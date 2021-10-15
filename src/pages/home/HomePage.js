@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import QrReader from 'react-qr-reader'
+import './HomePage.css';
 
 const HomePage = () => {
     const [link, setLink] = useState('');
@@ -12,7 +13,7 @@ const HomePage = () => {
         console.log(err)
     }
     return (
-        <div>
+        <div className='root'>
             <h1>Scan your QR code:</h1>
             <QrReader
           delay={300}
