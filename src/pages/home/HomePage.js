@@ -19,7 +19,7 @@ const HomePage = () => {
           delay={300}
           onError={handleError}
           onScan={handleScan}
-          style={{ width: '500px' }}
+          className='scanner'
 
         />
         <p>Your product link is: <a href={`${link}`}>{link}</a></p>

@@ -1,14 +1,15 @@
-import firebase from 'firebase';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-const firebaseConfig = {
+const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTnX-NSLjtoprXpf_K8ctKkByrcRYElKY",
   authDomain: "vestore-credit.firebaseapp.com",
   projectId: "vestore-credit",
+  databaseURL: "https://vestore-credit.firebaseio.com/",
   storageBucket: "vestore-credit.appspot.com",
   messagingSenderId: "264214933460",
-  appId: "1:264214933460:web:b8aa23dcaef0c3e314f041"
-};
+  appId: "1:264214933460:web:b8aa23dcaef0c3e314f041",
+});
 
-firebase.initializeApp(firebaseConfig);
-export default firebase;
+const db = getFirestore();
+export default db;

@@ -1,3 +1,12 @@
 .root {
-    background-color: red;
+  padding: 20px;
+  min-height: 100vh;
+}
+.scanner {
+  width: 400px;
+}
+@media only screen and (max-width: 600px) {
+  .scanner {
+    width: 100%;
+  }
 }
