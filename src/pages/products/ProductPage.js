@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import db from "../../firebase";
+import { db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 
 const ProductPage = (props) => {
