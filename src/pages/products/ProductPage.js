@@ -1,12 +1,14 @@
 import { doc, getDoc } from "@firebase/firestore";
 import { getDownloadURL, ref } from "@firebase/storage";
 import React, { useEffect, useState } from "react";
+import Loader from "react-loader-spinner";
 import Oformit from "../../components/popup/Oformit";
 import { db, storage } from "../../firebase";
 import "./ProductPage.css";
 const ProductPage = (props) => {
   const id = props.match.params.id;
   const [data, setData] = useState();
+  const [imgReady, setImgReady] = useState(false);
 
   useEffect(() => {
     console.log(id);
@@ -20,6 +22,7 @@ const ProductPage = (props) => {
             // Or inserted into an <img> element
             const img = document.getElementById("myimg");
             img.setAttribute("src", url);
+            setImgReady(true);
           })
           .catch((error) => {
             console.error(error);
@@ -39,7 +42,30 @@ const ProductPage = (props) => {
   return (
     <div className="product_root">
       <h1>{data.title}</h1>
-      <img id="myimg" alt="text" />
+      <div
+        style={
+          imgReady
+            ? { display: "block", textAlign: "center" }
+            : { display: "none" }
+        }
+      >
+        <img id="myimg" alt="text" />
+      </div>
+      <div
+        style={
+          !imgReady
+            ? { display: "block", textAlign: "center" }
+            : { display: "none" }
+        }
+      >
+        <Loader
+          type="ThreeDots"
+          color="#d83232"
+          height={100}
+          width={100}
+          timeout={3000} //3 secs
+        />
+      </div>
       <div className="product_details">
         <p id="details_header">Описание</p>
         <p className="details_point">

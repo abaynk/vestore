@@ -2,6 +2,8 @@
   margin-top: 42px;
   padding: 20px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 #myimg {
   width: 100%;
