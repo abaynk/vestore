@@ -1,6 +1,7 @@
 import { doc, getDoc } from "@firebase/firestore";
 import { getDownloadURL, ref } from "@firebase/storage";
 import React, { useEffect, useState } from "react";
+import Oformit from "../../components/popup/Oformit";
 import { db, storage } from "../../firebase";
 import "./ProductPage.css";
 const ProductPage = (props) => {
@@ -40,14 +41,27 @@ const ProductPage = (props) => {
       <h1>{data.title}</h1>
       <img id="myimg" alt="text" />
       <div className="product_details">
-        <p>Описание</p>
-        <p>Производитель: {data.brand}</p>
-        <p>Категория: {data.category}</p>
-        <p>Описание: {data.description}</p>
-        <p>Серийный номер: {data.id}</p>
-        <p>Цена: {data.price}</p>
-        <p>Магазин: {data.store}</p>
+        <p id="details_header">Описание</p>
+        <p className="details_point">
+          Производитель: <span className="point_span">{data.brand}</span>
+        </p>
+        <p className="details_point">
+          Категория: <span className="point_span">{data.category}</span>
+        </p>
+        <p className="details_point">
+          Описание: <span className="point_span">{data.description}</span>
+        </p>
+        <p className="details_point">
+          Серийный номер: <span className="point_span">{data.id}</span>
+        </p>
+        <p className="details_point">
+          Цена: <span className="point_span">{data.price}</span>
+        </p>
+        <p className="details_point">
+          Магазин: <span className="point_span">{data.store}</span>
+        </p>
       </div>
+      <Oformit />
     </div>
   );
 };

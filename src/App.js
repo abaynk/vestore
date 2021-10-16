@@ -2,6 +2,7 @@ import HomePage from "./pages/home/HomePage";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import ProductPage from "./pages/products/ProductPage";
 import "./pages/home/HomePage.css";
+import OformitPage from "./pages/oformit/OformitPage";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
 
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/products/:id" component={ProductPage} />
+        <Route exact path="/products/:id" component={ProductPage} />
+        <Route exact path="/credit" component={OformitPage} />
       </Switch>
     </BrowserRouter>
   );
