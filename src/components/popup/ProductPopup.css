@@ -39,8 +39,8 @@
   text-decoration: none;
 }
 #myimg {
-  width: auto;
-  height: 245px;
+  max-height: 245px;
+  width: auto !important;
 }
 .oformit_root {
   background: #ffffff;
