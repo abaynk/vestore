@@ -45,3 +45,37 @@
     background-color: red;
   }
 }
+#topleft {
+  position: fixed;
+  top: 43vh;
+  left: 10vw;
+}
+#topright {
+  transform: rotate(90deg);
+  position: fixed;
+  top: 43vh;
+  right: 10vw;
+}
+#bottomright {
+  transform: rotate(180deg);
+  position: fixed;
+  bottom: 43vh;
+  right: 10vw;
+}
+#bottomleft {
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 43vh;
+  left: 10vw;
+}
+#navedite {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  position: fixed;
+  top: 20vh;
+  margin: 0;
+  width: 100%;
+}

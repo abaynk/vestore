@@ -4,6 +4,7 @@ import { db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import "./HomePage.css";
 import ProductPopup from "../../components/popup/ProductPopup";
+import { ReactComponent as Corner } from "../../corner.svg";
 
 const HomePage = () => {
   const [link, setLink] = useState("");
@@ -28,7 +29,13 @@ const HomePage = () => {
   return (
     <div className="root">
       <div className="video_container">
-        <div className="video_wrapper"></div>
+        <div className="video_wrapper">
+          <p id="navedite">наведите камеру для сканирования</p>
+          <Corner id="topleft" />
+          <Corner id="topright" />
+          <Corner id="bottomleft" />
+          <Corner id="bottomright" />
+        </div>
 
         <BarcodeScannerComponent
           width="100000"
