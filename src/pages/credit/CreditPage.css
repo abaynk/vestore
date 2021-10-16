@@ -1,0 +1,120 @@
+.credit_root {
+  margin-top: 42px;
+}
+.credit_slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.span {
+  width: 50%;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: #7b7b7b;
+  border-bottom: 1px solid #7b7b7b;
+}
+.active {
+  border-bottom: 3px solid #d83232;
+  color: #d83232;
+}
+.credit_label {
+  font-size: 12px;
+  line-height: 15px;
+  color: #7b7b7b;
+  margin: 0;
+  margin-bottom: 8px;
+}
+#credit_price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2c2c2c;
+  margin: auto;
+}
+.credit_button {
+  width: 74px;
+  height: 34px;
+  background: #ffffff;
+  border: 1px solid #7b7b7b;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #7b7b7b;
+}
+.credit_button.active {
+  background: #d83232;
+  color: #ffffff;
+  border: 1px solid #d83232;
+}
+.buttons_container {
+  display: grid;
+  grid-template-columns: 74px 74px 74px 74px;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+.credit_div {
+  width: 90%;
+  margin: auto;
+}
+.background_secondary {
+  background: #f5f6fa;
+  padding: 12px 5% 20px 5%;
+}
+.mt16 {
+  margin-top: 16px;
+}
+#credit_input {
+  background: #f5f6fa;
+  border-radius: 8px;
+  height: 46px;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2c2c2c;
+}
+#credit_input:focus {
+  outline: none;
+}
+.initialPayment {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #2c2c2c;
+  margin: 0;
+}
+#price_error {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0;
+  margin-top: 8px;
+  color: #d83232;
+}
+.credit_oformit {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.credit_oformit > button {
+  width: 90%;
+  height: 52px;
+  color: #ffff;
+  border-radius: 8px;
+  border: none;
+  background: #d83232;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}

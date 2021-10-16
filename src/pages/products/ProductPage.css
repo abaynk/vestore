@@ -1,9 +1,33 @@
 .product_root {
   margin-top: 42px;
-  padding: 20px;
-  min-height: 100vh;
+  min-height: 110vh;
+}
+.product_container {
   display: flex;
   flex-direction: column;
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+}
+.product_title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #2c2c2c;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.product_details {
+  text-align: left;
+}
+#product_price {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #2c2c2c;
+  margin: 0;
 }
 #myimg {
   width: 100%;

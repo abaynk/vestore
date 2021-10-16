@@ -6,7 +6,7 @@ const Oformit = () => {
   return (
     <div className="oformit_root">
       <Link to="/credit" className="popup_button">
-        <button className="popup_button">оформить</button>
+        <button className="popup_button">рассчитать кредит/рассрочку</button>
       </Link>
     </div>
   );

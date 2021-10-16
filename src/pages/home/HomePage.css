@@ -40,11 +40,7 @@
   border-top: 40vh solid rgba(0, 0, 0, 0.5);
   border-bottom: 40vh solid rgba(0, 0, 0, 0.5);
 }
-@media only screen and (max-width: 600px) {
-  .scanner {
-    background-color: red;
-  }
-}
+
 #topleft {
   position: absolute;
   top: 3vh;
@@ -76,6 +72,28 @@
   color: #ffffff;
   position: fixed;
   top: 20vh;
+  margin: 0;
+  width: 100%;
+}
+#error_message {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #d83232;
+  position: absolute;
+  bottom: -20vh;
+  margin: 0;
+  width: 100%;
+}
+#note_message {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffff;
+  position: absolute;
+  bottom: -20vh;
   margin: 0;
   width: 100%;
 }

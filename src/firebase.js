@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTnX-NSLjtoprXpf_K8ctKkByrcRYElKY",
   authDomain: "vestore-credit.firebaseapp.com",

@@ -39,7 +39,10 @@ const ProductPopup = ({ product, id }) => {
 
   return (
     <div className="popup_root">
-      <h2 className="popup_title">{product.title}</h2>
+      <div className="popup_details">
+        <h2 className="popup_title">{product.title}</h2>
+        <p id="popup_price">{product.price} тенге</p>
+      </div>
       <div style={imgReady ? { display: "block" } : { display: "none" }}>
         <img id="myimg" alt="text" />
       </div>
@@ -67,7 +70,7 @@ export default ProductPopup;
 // price
 // img
 // description
-// id
-// category
+// code
+// type
 // brand
 // barcode

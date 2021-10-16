@@ -20,7 +20,8 @@
   line-height: 24px;
   color: #2c2c2c;
   text-align: left;
-  margin-left: 20px;
+  margin: 0;
+  margin-bottom: 12px;
 }
 .popup_button {
   width: 90%;
@@ -33,6 +34,17 @@
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
+}
+.popup_details {
+  width: 90%;
+  text-align: left;
+}
+#popup_price {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2c2c2c;
+  margin: 0;
 }
 .popup_button > a {
   color: #ffff;

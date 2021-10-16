@@ -5,11 +5,22 @@ import { doc, getDoc } from "firebase/firestore";
 import "./HomePage.css";
 import ProductPopup from "../../components/popup/ProductPopup";
 import { ReactComponent as Corner } from "../../corner.svg";
+import { useSwipeable } from "react-swipeable";
 
 const HomePage = () => {
   const [link, setLink] = useState("");
   const [data, setData] = useState();
+  const [error, setError] = useState(false);
+  const [stop, setStop] = useState(false);
+  const [note, setNote] = useState(false);
 
+  const handlers = useSwipeable({
+    onSwipedDown: () => {
+      setData();
+      setStop(false);
+      setNote(true);
+    },
+  });
   useEffect(() => {
     console.log(link);
     const getData = async () => {
@@ -17,8 +28,11 @@ const HomePage = () => {
       if (querySnapshot.exists()) {
         console.log(querySnapshot.data().title);
         setData(querySnapshot.data());
+        setError(false);
+        setStop(true);
       } else {
         console.error("no docuement was found");
+        setError(true);
       }
     };
     if (link) {
@@ -35,6 +49,8 @@ const HomePage = () => {
           <Corner id="topright" />
           <Corner id="bottomleft" />
           <Corner id="bottomright" />
+          {error && <p id="error_message">штрихкод не распознан</p>}
+          {note && <p id="note_message">пожалуйста обновите</p>}
         </div>
 
         <BarcodeScannerComponent
@@ -45,10 +61,14 @@ const HomePage = () => {
               setLink(result.text);
             }
           }}
-          stopStream={link}
+          stopStream={stop}
         />
       </div>
-      {data && <ProductPopup product={data} id={link} />}
+      {data && (
+        <div {...handlers}>
+          <ProductPopup product={data} id={link} />
+        </div>
+      )}
     </div>
   );
 };
