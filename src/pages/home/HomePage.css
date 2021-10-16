@@ -58,14 +58,14 @@
 }
 #bottomright {
   transform: rotate(180deg);
-  position: fixed;
-  bottom: 43vh;
+  position: absolute;
+  bottom: 3vh;
   right: 10vw;
 }
 #bottomleft {
   transform: rotate(270deg);
-  position: fixed;
-  bottom: 43vh;
+  position: absolute;
+  bottom: 3vh;
   left: 10vw;
 }
 #navedite {
