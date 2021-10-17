@@ -4,6 +4,9 @@ import ProductPage from "./pages/products/ProductPage";
 import "./pages/home/HomePage.css";
 import CreditPage from "./pages/credit/CreditPage";
 import { Product } from "./context/ProductContext";
+import ScanPage from "./pages/scan/ScanPage";
+import OformitPage from "./pages/oformit/OformitPage";
+import SmsPage from "./pages/oformit/SmsPage";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/products/:id" component={ProductPage} />
           <Route exact path="/credit" component={CreditPage} />
+          <Route exact path="/idScan" component={ScanPage} />
+          <Route exact path="/register" component={OformitPage} />
+          <Route exact path="/confirmSms" component={SmsPage} />
         </Switch>
       </BrowserRouter>
     </Product>

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import Button from "../../components/buttons/Button";
 import { ProductContext } from "../../context/ProductContext";
 import "./CreditPage.css";
 
@@ -160,9 +161,10 @@ const CreditPage = () => {
         </div>
       )}
       <div className="credit_oformit">
-        <button onClick={(e) => submitForm(e)}>
-          оформить {active === 0 ? "кредит" : "рассрочку"}
-        </button>
+        <Button
+          link={"/idScan"}
+          text={`оформить ${active === 0 ? "кредит" : "рассрочку"}`}
+        />
       </div>
     </div>
   );

@@ -10,3 +10,7 @@
   line-height: 22px;
   color: #ffffff;
 }
+.disabled {
+  background: #cfcfcf;
+  color: #7b7b7b;
+}

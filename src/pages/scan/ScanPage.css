@@ -1,0 +1,60 @@
+.scan_wrapper {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 35vh solid rgba(0, 0, 0, 0.5);
+  border-bottom: 35vh solid rgba(0, 0, 0, 0.5);
+}
+#shutter {
+  position: absolute;
+  bottom: -12vh;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+#shutter:active {
+  transform: scale(0.95);
+}
+#or {
+  position: absolute;
+  bottom: -19vh;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+#gallery {
+  position: absolute;
+  bottom: -28vh;
+  left: 25%;
+  background: #f5f6fa;
+  border: none;
+  height: 52px;
+  width: 50%;
+  border-radius: 17px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #2c2c2c;
+  z-index: 1000;
+}
+#gallery:active {
+  transform: scale(0.95);
+}
+#lottie_container {
+  position: absolute;
+  bottom: 5vh;
+  height: 20vh;
+  width: 100%;
+}
+#lottie {
+  height: 20vh;
+  width: 20vh;
+  margin: auto;
+}
