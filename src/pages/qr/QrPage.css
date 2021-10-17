@@ -1,0 +1,39 @@
+.qr_root {
+  margin-top: 42px;
+  background-color: #f5f6fa;
+  min-height: 100vh;
+}
+.qr_container {
+  padding: 20px;
+}
+.qr_itself {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#qr_title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2c2c2c;
+}
+.flexrow,
+.flexcolumn {
+  display: flex;
+}
+.flexrow {
+  justify-content: space-between;
+}
+.flexcolumn {
+  flex-direction: column;
+  text-align: left;
+}
+.qrlabel {
+  font-size: 12px;
+  line-height: 15px;
+  color: #7b7b7b;
+  margin: 0;
+  margin-bottom: 2px;
+}

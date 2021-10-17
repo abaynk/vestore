@@ -10,7 +10,7 @@ const ProductPage = (props) => {
   const id = props.match.params.id;
   const [data, setData] = useState();
   const [imgReady, setImgReady] = useState(false);
-  const { setPrice } = useContext(ProductContext);
+  const { setProduct } = useContext(ProductContext);
   useEffect(() => {
     console.log(id);
     const getData = async () => {
@@ -18,7 +18,7 @@ const ProductPage = (props) => {
       if (querySnapshot.exists()) {
         console.log(querySnapshot.data().title);
         setData(querySnapshot.data());
-        setPrice(querySnapshot.data().price);
+        setProduct(querySnapshot.data());
         getDownloadURL(ref(storage, querySnapshot.data().img))
           .then((url) => {
             // Or inserted into an <img> element

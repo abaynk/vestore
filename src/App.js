@@ -7,6 +7,8 @@ import { Product } from "./context/ProductContext";
 import ScanPage from "./pages/scan/ScanPage";
 import OformitPage from "./pages/oformit/OformitPage";
 import SmsPage from "./pages/oformit/SmsPage";
+import Confirmation from "./pages/oformit/Confirmation";
+import QrPage from "./pages/qr/QrPage";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route exact path="/idScan" component={ScanPage} />
           <Route exact path="/register" component={OformitPage} />
           <Route exact path="/confirmSms" component={SmsPage} />
+          <Route exact path="/confirmation" component={Confirmation} />
+          <Route exact path="/successQR" component={QrPage} />
         </Switch>
       </BrowserRouter>
     </Product>

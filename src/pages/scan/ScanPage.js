@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
 import { ReactComponent as Corner } from "../../corner.svg";
 import { ReactComponent as Shutter } from "../../shutter.svg";
@@ -6,8 +6,11 @@ import Lottie from "lottie-react";
 import animationData from "../../lf30_editor_p6izlfvs.json";
 import "./ScanPage.css";
 import { Redirect, useHistory } from "react-router";
+import { ProductContext } from "../../context/ProductContext";
 
 const ScanPage = () => {
+  const { product } = useContext(ProductContext);
+
   const [link, setLink] = useState("");
   const [stop, setStop] = useState(false);
   const [lottie, setLottie] = useState(false);
@@ -25,6 +28,9 @@ const ScanPage = () => {
       history.push("/register");
     }, 3000);
   };
+  useEffect(() => {
+    console.log(product);
+  }, []);
   return (
     <div className="root">
       <div className="video_container">
@@ -45,6 +51,7 @@ const ScanPage = () => {
                 animationData={animationData}
                 onLoopComplete={() => handleRedirect()}
                 id="lottie"
+                speed={5}
               />
             </div>
           )}

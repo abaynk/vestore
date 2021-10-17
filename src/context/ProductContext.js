@@ -3,9 +3,9 @@ import React, { createContext, useState } from "react";
 const ProductContext = createContext();
 
 const Product = (props) => {
-  const [price, setPrice] = useState();
+  const [product, setProduct] = useState();
   return (
-    <ProductContext.Provider value={{ price, setPrice }}>
+    <ProductContext.Provider value={{ product, setProduct }}>
       {props.children}
     </ProductContext.Provider>
   );

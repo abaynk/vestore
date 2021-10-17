@@ -17,7 +17,8 @@ const rassrochkaMonths = [
 
 const CreditPage = () => {
   const [active, setActive] = useState(0);
-  const { price } = useContext(ProductContext);
+  const { product, setProduct } = useContext(ProductContext);
+  const price = product.price;
   const initialPayment = parseInt(price.replace(" ", "")) * 0.1;
   const [vznos, setVznos] = useState(initialPayment);
   const [activeMonth, setActiveMonth] = useState(!active ? 0 : 3);
@@ -69,6 +70,9 @@ const CreditPage = () => {
       });
     }
   };
+  useEffect(() => {
+    console.log(product);
+  }, []);
   useEffect(() => {
     active === 0 ? calculateCredit() : calculateRassrochka();
   }, [activeMonth, vznos]);
@@ -160,7 +164,14 @@ const CreditPage = () => {
           )}
         </div>
       )}
-      <div className="credit_oformit">
+      <div
+        className="credit_oformit"
+        onClick={() => {
+          active === 0
+            ? setProduct({ ...product, payment: creditResults })
+            : setProduct({ ...product, payment: rassrochkaResults });
+        }}
+      >
         <Button
           link={"/idScan"}
           text={`оформить ${active === 0 ? "кредит" : "рассрочку"}`}

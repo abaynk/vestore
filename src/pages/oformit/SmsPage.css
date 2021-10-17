@@ -1,0 +1,63 @@
+.sms_root {
+  margin-top: 42px;
+}
+.sms_container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
+.sms_container > h2,
+p {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+.sms_container > h1 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+.sms_container > p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #7b7b7b;
+  margin-bottom: 70px;
+}
+.code_area {
+  justify-content: center;
+  display: flex;
+}
+.code_area input {
+  background: #f5f6fa;
+  border-radius: 8px;
+  width: 54px;
+  height: 83px !important;
+  box-shadow: none;
+  border: none !important;
+  padding: 0 !important;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #2c2c2c;
+}
+.code_area > div {
+  width: 268px !important;
+}
+.code_area > div > div {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px !important;
+  width: 100%;
+}
+.sms_button {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}

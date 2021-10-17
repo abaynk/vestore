@@ -1,0 +1,41 @@
+.payment_info {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2c2c2c;
+}
+.confirmation_root {
+  margin-top: 42px;
+  min-height: 120vh;
+}
+.confirmation_container {
+  padding: 20px;
+  text-align: center;
+}
+.confirmation_container > h3 {
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2c2c2c;
+  margin: 0;
+}
+#conf_price {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #2c2c2c;
+  margin-top: 8px;
+}
+#success {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2e8b4e;
+}
+#myimg2 {
+  width: 152px;
+  height: auto;
+  margin: 16px 0 24px 0;
+}
