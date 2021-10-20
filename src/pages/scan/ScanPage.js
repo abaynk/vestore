@@ -5,7 +5,7 @@ import { ReactComponent as Shutter } from "../../shutter.svg";
 import Lottie from "lottie-react";
 import animationData from "../../lf30_editor_p6izlfvs.json";
 import "./ScanPage.css";
-import { Redirect, useHistory } from "react-router";
+import { useHistory } from "react-router";
 import { ProductContext } from "../../context/ProductContext";
 
 const ScanPage = () => {

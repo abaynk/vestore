@@ -21,7 +21,7 @@ const CreditPage = () => {
   const price = product.price;
   const initialPayment = parseInt(price.replace(" ", "")) * 0.1;
   const [vznos, setVznos] = useState(initialPayment);
-  const [activeMonth, setActiveMonth] = useState(!active ? 0 : 3);
+  const [activeMonth, setActiveMonth] = useState();
   const [creditResults, setCreditResults] = useState({
     monthlyPayment: "",
     totalPayment: "",
@@ -71,8 +71,8 @@ const CreditPage = () => {
     }
   };
   useEffect(() => {
-    console.log(product);
-  }, []);
+    setActiveMonth(active === 0 ? 0 : 3);
+  }, [active]);
   useEffect(() => {
     active === 0 ? calculateCredit() : calculateRassrochka();
   }, [activeMonth, vznos]);
