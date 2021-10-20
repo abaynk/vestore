@@ -18,12 +18,13 @@ const ScanPage = () => {
   const handleSnap = (e) => {
     e.preventDefault();
     setStop(true);
-    setTimeout(() => {
-      setLottie(true);
-    }, 3000);
+    // setTimeout(() => {
+    //   setLottie(true);
+    // }, 3000);
+    handleRedirect();
   };
   const handleRedirect = () => {
-    setLottie(false);
+    // setLottie(false);
     setTimeout(() => {
       history.push("/register");
     }, 3000);
